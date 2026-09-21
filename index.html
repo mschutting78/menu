@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Einkaufswochen</title>
+<meta name="description" content="Aktionen, Wochenmenü und Einkaufsliste für Kärnten.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <p class="kicker">Kärnten</p>
+  <h1>Einkaufswochen</h1>
+  <p class="lede" style="margin-top:.8rem">Aktionen aus den Flugblättern von Penny, Billa, Spar und Lidl,
+  dazu ein Wochenmenü für vier Personen und eine abhakbare Einkaufsliste. Alle Preise sind Richtwerte.</p>
+</header>
+
+<section style="margin-top:0">
+  <h2>Archiv</h2>
+  <ul class="runs" id="runs"></ul>
+  <p id="msg" class="lede" style="margin-top:1rem"></p>
+</section>
+
+<footer>
+  <p>Quellen: Flugblatt-Daten von aktionsradar.at und flugblattangebote.at.
+  Preise können je nach Filiale abweichen. Vor dem Einkauf gegenprüfen.</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var list = document.getElementById("runs");
+  var msg = document.getElementById("msg");
+
+  function deStr(iso){
+    var p = String(iso).split("-");
+    if(p.length !== 3) return iso;
+    return p[2] + "." + p[1] + ".";
+  }
+
+  function render(runs){
+    if(!runs.length){ msg.textContent = "Noch keine Durchläufe vorhanden."; return; }
+    runs.sort(function(a,b){ return a.id < b.id ? 1 : -1; });
+    runs.forEach(function(r, i){
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.href = "woche.html?w=" + encodeURIComponent(r.id);
+
+      var t = document.createElement("span");
+      t.className = "rt";
+      t.textContent = r.title || r.id;
+      if(i === 0){
+        var b = document.createElement("span");
+        b.className = "latest";
+        b.textContent = "aktuell";
+        t.appendChild(b);
+      }
+
+      var best = document.createElement("span");
+      best.className = "rbest";
+      best.textContent = r.bestSaving ? "bis −" + r.bestSaving + " %" : "";
+
+      var meta = document.createElement("span");
+      meta.className = "rmeta";
+      var bits = [];
+      if(r.from && r.to) bits.push("gültig " + deStr(r.from) + "–" + deStr(r.to));
+      if(r.dealCount) bits.push(r.dealCount + " Angebote");
+      if(r.markets && r.markets.length) bits.push(r.markets.join(", "));
+      meta.textContent = bits.join(" · ");
+
+      a.appendChild(t); a.appendChild(best); a.appendChild(meta);
+      li.appendChild(a); list.appendChild(li);
+    });
+  }
+
+  fetch("data/runs.json", {cache:"no-cache"})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){ render(d.runs || []); })
+    .catch(function(){
+      msg.textContent = "Das Archiv konnte nicht geladen werden. Prüfe, ob data/runs.json vorhanden ist. "
+        + "Beim Öffnen direkt von der Festplatte blockiert der Browser das Laden — dafür einen lokalen Server "
+        + "oder GitHub Pages verwenden.";
+    });
+})();
+</script>
+</body>
+</html>

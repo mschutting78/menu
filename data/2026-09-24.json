@@ -1,0 +1,589 @@
+{
+  "id": "2026-09-24",
+  "title": "Einkaufswoche 24. bis 30. September",
+  "region": "Kärnten",
+  "created": "2026-09-21",
+  "sources": [
+    "aktionsradar.at",
+    "flugblattangebote.at"
+  ],
+  "notes": "Erhebung am Montag statt Mittwoch — die Donnerstags-Flugblätter von Billa und Spar waren noch nicht veröffentlicht.",
+  "status": [
+    {
+      "market": "Penny",
+      "state": "ok",
+      "note": "Flugblatt ab Do 24.09. vollständig ausgewertet"
+    },
+    {
+      "market": "Spar / Eurospar",
+      "state": "partial",
+      "note": "nur Monatssparer, gültig bis 30.09."
+    },
+    {
+      "market": "Billa / Billa Plus",
+      "state": "missing",
+      "note": "neues Flugblatt noch nicht veröffentlicht"
+    },
+    {
+      "market": "Lidl",
+      "state": "partial",
+      "note": "Flugblatt 24.–30.09. erfasst, Normalpreise nicht ausgewiesen"
+    }
+  ],
+  "dealsNote": "Nach Ersparnis sortiert. Preise sind Richtwerte aus Flugblatt-Daten, keine Kassenpreise — im Markt gegenprüfen.",
+  "deals": [
+    {
+      "product": "Knorr Bitte zu Tisch! Suppen",
+      "unit": "3 Stück",
+      "market": "Penny",
+      "price": 1.32,
+      "regular": 2.97,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen"
+    },
+    {
+      "product": "Kornspitz",
+      "unit": "75 g",
+      "market": "Penny",
+      "price": 0.37,
+      "regular": 0.75,
+      "validUntil": "2026-09-26",
+      "category": "Brot & Gebäck"
+    },
+    {
+      "product": "Schärdinger Käsescheiben",
+      "unit": "150 g",
+      "market": "Penny",
+      "price": 1.39,
+      "regular": 2.79,
+      "validFrom": "2026-09-28",
+      "validUntil": "2026-09-30",
+      "untilSaturday": false,
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Zott Monte Maxi oder Mega",
+      "unit": "400 g",
+      "market": "Penny",
+      "price": 1.39,
+      "regular": 2.79,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Schärdinger Bojar",
+      "unit": "100 g",
+      "market": "Penny",
+      "price": 0.84,
+      "regular": 1.69,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Philadelphia Aufstrich oder Cottage Cheese",
+      "unit": "175–200 g",
+      "market": "Penny",
+      "price": 1.24,
+      "regular": 2.49,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Radatz Extrawurst",
+      "unit": "200 g",
+      "market": "Penny",
+      "price": 1.79,
+      "regular": 3.59,
+      "validUntil": "2026-09-26",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Obstgarten",
+      "unit": "175 g",
+      "market": "Penny",
+      "price": 0.64,
+      "regular": 1.29,
+      "validFrom": "2026-09-25",
+      "validUntil": "2026-09-26",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "SPAR High Protein Bio-Joghurt Natur",
+      "unit": "400 g",
+      "market": "Spar",
+      "price": 0.99,
+      "regular": 1.99,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Argeta Aufstrich",
+      "unit": "95 g",
+      "market": "Penny",
+      "price": 0.89,
+      "regular": 1.69,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen"
+    },
+    {
+      "product": "Formil haltbare Vollmilch",
+      "unit": "1 l",
+      "market": "Penny",
+      "price": 0.89,
+      "regular": 1.61,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Butternuss-Kürbis",
+      "unit": "1 kg",
+      "market": "Penny",
+      "price": 0.99,
+      "regular": 1.69,
+      "validFrom": "2026-09-28",
+      "validUntil": "2026-09-30",
+      "untilSaturday": false,
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Knorr Kaiserteller oder Schnelle Feine",
+      "unit": "div. Sorten",
+      "market": "Spar",
+      "price": 0.99,
+      "regular": 1.59,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen"
+    },
+    {
+      "product": "Rama Cremefine",
+      "unit": "250 ml",
+      "market": "Penny",
+      "price": 0.96,
+      "regular": 1.45,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Pflücksalat oder Rucola",
+      "unit": "125 g",
+      "market": "Penny",
+      "price": 0.99,
+      "regular": 1.49,
+      "validFrom": "2026-09-28",
+      "validUntil": "2026-09-30",
+      "untilSaturday": false,
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Knorr Basis",
+      "unit": "div. Sorten",
+      "market": "Penny",
+      "price": 0.93,
+      "regular": 1.39,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen"
+    },
+    {
+      "product": "Felix Saucen",
+      "unit": "240–250 ml",
+      "market": "Penny",
+      "price": 1.99,
+      "regular": 2.99,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen"
+    },
+    {
+      "product": "Satsumas",
+      "unit": "1 kg",
+      "market": "Penny",
+      "price": 1.39,
+      "regular": 1.99,
+      "validFrom": "2026-09-28",
+      "validUntil": "2026-09-30",
+      "untilSaturday": false,
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Trauben weiß, kernlos",
+      "unit": "500 g",
+      "market": "Penny",
+      "price": 1.99,
+      "regular": 2.79,
+      "validUntil": "2026-09-26",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Berger Schinken",
+      "unit": "100 g",
+      "market": "Penny",
+      "price": 1.79,
+      "regular": 2.49,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Frische Hühnerkeulen",
+      "unit": "Packung",
+      "market": "Lidl",
+      "price": 3.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Frisches Faschiertes gemischt",
+      "unit": "Packung",
+      "market": "Lidl",
+      "price": 5.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Lachsfilet",
+      "unit": "Packung",
+      "market": "Lidl",
+      "price": 5.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-09-30",
+      "category": "Fisch"
+    },
+    {
+      "product": "Bio Trauben hell, kernlos",
+      "unit": "Schale",
+      "market": "Lidl",
+      "price": 2.09,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Mini Paprika Mix",
+      "unit": "Packung",
+      "market": "Lidl",
+      "price": 1.49,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Ciabatta Brot",
+      "unit": "Stück",
+      "market": "Lidl",
+      "price": 0.69,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-09-30",
+      "category": "Brot & Gebäck"
+    }
+  ],
+  "flatPrices": "Aktionspreise ohne ausgewiesenen Normalpreis, für die Menüplanung relevant (Penny, 24.–30.09.): Faschiertes gemischt 1 kg 5,49 · Hendl bratfertig 4,99/kg · Hendl-Filet natur 700 g 7,79 · Minuten-Schnitzel 1 kg 7,99 · Schweins-Schnitzelfleisch 8,49/kg · XXL Schulter 5,49/kg · Putenschnitzel 550 g 5,69 · Karotten 1 kg 0,99 · Gurke 1,29 · Äpfel 2 kg 2,49 · Schärdinger Gouda 1 kg 6,66 · Sauerrahm 250 g 0,79 · Eier 10 Stück 3,29. Lidl (24.–30.09., ohne Normalpreise): Hühnerkeulen 3,99 · Faschiertes gemischt 5,99 (Penny mit 5,49/kg günstiger) · Lachsfilet 5,99 · Bio-Trauben kernlos 2,09 · Mini-Paprika 1,49 · Ciabatta 0,69.",
+  "menu": {
+    "title": "Wochenmenü",
+    "from": "2026-09-28",
+    "to": "2026-10-02",
+    "servings": 4,
+    "note": "Zwei fleischlose Tage. Fleisch am Einkaufstag portionieren und die Hälfte des Faschierten für Freitag einfrieren.",
+    "reuse": "Mehrfachnutzung: 1 kg Faschiertes deckt Montag und Freitag, 1 kg Karotten vier Tage, 380 g Zwiebeln vier Tage, 1 kg Gouda Montag plus Jause, Sauerrahm Dienstag, Cremefine Mittwoch, Eier Donnerstag und Freitag.",
+    "days": [
+      {
+        "day": "Montag",
+        "title": "Spaghetti Bolognese",
+        "minutes": 35,
+        "ingredients": [
+          "500 g Faschiertes gemischt",
+          "1 Zwiebel",
+          "2 Karotten",
+          "2 × Felix Tomatensauce",
+          "500 g Spaghetti",
+          "100 g geriebener Gouda"
+        ],
+        "deals": [
+          "Faschiertes",
+          "Zwiebeln",
+          "Karotten",
+          "Felix Sauce",
+          "Gouda"
+        ],
+        "steps": [
+          "Zwiebel fein hacken, Karotten grob reiben.",
+          "Faschiertes in 2 EL heißem Öl 5 Minuten scharf anbraten, bis es Farbe genommen hat. Nicht zu früh umrühren.",
+          "Zwiebel und Karotten dazugeben, 3 Minuten mitrösten.",
+          "Tomatensauce angießen, mit Salz, Pfeffer und Oregano würzen, 20 Minuten offen köcheln lassen.",
+          "Parallel Salzwasser aufsetzen, Spaghetti nach Packungsangabe kochen, eine Tasse Nudelwasser aufheben.",
+          "Sauce mit etwas Nudelwasser auf die gewünschte Konsistenz bringen, mit den Spaghetti mischen, Gouda darüberstreuen."
+        ]
+      },
+      {
+        "day": "Dienstag",
+        "title": "Hendl-Streifen mit Reis, Karottengemüse und Gurkensalat",
+        "minutes": 30,
+        "ingredients": [
+          "700 g Hendl-Filet natur",
+          "300 g Reis",
+          "400 g Karotten",
+          "150 g Sauerrahm",
+          "1 Zwiebel",
+          "1 Gurke"
+        ],
+        "deals": [
+          "Hendl-Filet",
+          "Karotten",
+          "Sauerrahm",
+          "Zwiebeln",
+          "Gurke"
+        ],
+        "steps": [
+          "Reis mit der doppelten Menge Salzwasser aufsetzen und zugedeckt 20 Minuten quellen lassen.",
+          "Hendl-Filet in fingerdicke Streifen schneiden, mit Salz, Pfeffer und Paprikapulver würzen.",
+          "Karotten in Scheiben schneiden, Zwiebel in Spalten.",
+          "Fleisch in heißem Öl 4 bis 5 Minuten rundum anbraten, herausnehmen und warm stellen.",
+          "Zwiebel und Karotten in derselben Pfanne 6 Minuten braten, 100 ml Wasser angießen und weich dünsten.",
+          "Fleisch zurück in die Pfanne, Sauerrahm einrühren und nur noch heiß werden lassen, nicht kochen. Mit Reis servieren."
+        ]
+      },
+      {
+        "day": "Mittwoch",
+        "title": "Butternuss-Kürbiscremesuppe mit Käsebroten",
+        "minutes": 30,
+        "ingredients": [
+          "1 kg Butternuss-Kürbis",
+          "2 Karotten",
+          "1 Zwiebel",
+          "250 ml Rama Cremefine",
+          "1 l Suppe",
+          "Käsescheiben und Brot"
+        ],
+        "deals": [
+          "Butternuss-Kürbis",
+          "Karotten",
+          "Zwiebeln",
+          "Cremefine",
+          "Käsescheiben"
+        ],
+        "steps": [
+          "Kürbis schälen, halbieren, die Kerne ausschaben und in 2 cm große Würfel schneiden.",
+          "Zwiebel und Karotten fein würfeln und in Butter 5 Minuten anschwitzen.",
+          "Kürbis zugeben, mit 1 l Suppe aufgießen und 20 Minuten weich kochen.",
+          "Mit dem Stabmixer fein pürieren, Cremefine einrühren, mit Salz und einer Prise Muskat abschmecken.",
+          "Brot mit Käsescheiben belegen, im Rohr überbacken und zur Suppe servieren."
+        ]
+      },
+      {
+        "day": "Donnerstag",
+        "title": "Kaiserschmarrn mit Apfelmus",
+        "minutes": 35,
+        "ingredients": [
+          "4 Eier",
+          "250 ml Milch",
+          "200 g Mehl",
+          "1 kg Äpfel",
+          "Butter",
+          "Zucker und Staubzucker"
+        ],
+        "deals": [
+          "Eier",
+          "Milch",
+          "Äpfel"
+        ],
+        "steps": [
+          "Eier trennen, das Eiklar mit einer Prise Salz steif schlagen.",
+          "Dotter mit Milch, Mehl und 1 EL Zucker glatt rühren, dann den Eischnee locker unterheben.",
+          "Butter in einer großen Pfanne schmelzen, Teig eingießen und bei mittlerer Hitze 4 Minuten stocken lassen.",
+          "Wenden, mit zwei Gabeln in Stücke reißen und unter Rühren goldbraun fertig backen.",
+          "Äpfel schälen, würfeln, mit 2 EL Wasser und etwas Zucker 10 Minuten weich kochen und zerdrücken.",
+          "Schmarrn mit Staubzucker bestreuen und mit dem Apfelmus servieren."
+        ]
+      },
+      {
+        "day": "Freitag",
+        "title": "Faschierte Laibchen mit Kartoffelpüree und Karotten",
+        "minutes": 40,
+        "ingredients": [
+          "500 g Faschiertes (Rest von Montag)",
+          "1 Ei",
+          "Semmelbrösel",
+          "1 Zwiebel",
+          "800 g Kartoffeln",
+          "300 g Karotten",
+          "Milch"
+        ],
+        "deals": [
+          "Faschiertes",
+          "Eier",
+          "Zwiebeln",
+          "Karotten",
+          "Milch"
+        ],
+        "steps": [
+          "Kartoffeln schälen, würfeln und in Salzwasser 20 Minuten weich kochen.",
+          "Zwiebel fein hacken. Faschiertes mit Zwiebel, Ei, 4 EL Semmelbröseln, Salz, Pfeffer und Majoran verkneten, 10 Minuten rasten lassen.",
+          "Karotten in Scheiben schneiden und in wenig Salzwasser mit einem Stück Butter 10 Minuten dünsten.",
+          "Aus der Masse 8 Laibchen formen und in Öl je Seite 5 Minuten bei mittlerer Hitze braten.",
+          "Kartoffeln abseihen, mit heißer Milch und Butter stampfen und abschmecken.",
+          "Laibchen mit Püree und Karotten anrichten."
+        ]
+      }
+    ]
+  },
+  "shopping": [
+    {
+      "market": "Penny",
+      "note": "Haupteinkauf, Do 24.09. oder Fr 25.09.",
+      "items": [
+        {
+          "name": "Faschiertes gemischt",
+          "qty": "1 kg",
+          "eur": 5.49
+        },
+        {
+          "name": "Hendl-Filet natur",
+          "qty": "700 g",
+          "eur": 7.79
+        },
+        {
+          "name": "Schärdinger Gouda",
+          "qty": "1 kg",
+          "eur": 6.66
+        },
+        {
+          "name": "Schärdinger Sauerrahm",
+          "qty": "250 g",
+          "eur": 0.79
+        },
+        {
+          "name": "Rama Cremefine",
+          "qty": "250 ml",
+          "eur": 0.96
+        },
+        {
+          "name": "Formil Vollmilch",
+          "qty": "2 × 1 l",
+          "eur": 1.78
+        },
+        {
+          "name": "Gnaser Eier Gr. L",
+          "qty": "10 Stück",
+          "eur": 3.29
+        },
+        {
+          "name": "Karotten",
+          "qty": "1 kg",
+          "eur": 0.99
+        },
+        {
+          "name": "Zwiebeln",
+          "qty": "380 g",
+          "eur": 1.0
+        },
+        {
+          "name": "Gurke",
+          "qty": "1 Stück",
+          "eur": 1.29
+        },
+        {
+          "name": "Äpfel",
+          "qty": "2 kg",
+          "eur": 2.49
+        },
+        {
+          "name": "Felix Sauce",
+          "qty": "2 × 240 ml",
+          "eur": 3.98
+        },
+        {
+          "name": "Knorr Basis",
+          "qty": "1 Packung",
+          "eur": 0.93
+        },
+        {
+          "name": "Penny Sonnenblumenöl",
+          "qty": "1 l",
+          "eur": 1.69
+        },
+        {
+          "name": "Kornspitz",
+          "qty": "6 Stück, nur bis Samstag",
+          "eur": 2.22
+        },
+        {
+          "name": "Zott Monte",
+          "qty": "400 g",
+          "eur": 1.39
+        }
+      ]
+    },
+    {
+      "market": "Spar",
+      "note": "Ergänzung, Monatssparer bis 30.09.",
+      "items": [
+        {
+          "name": "SPAR High Protein Bio-Joghurt",
+          "qty": "2 × 400 g",
+          "eur": 1.98
+        },
+        {
+          "name": "TANN Extrawurst",
+          "qty": "500 g",
+          "eur": 2.49
+        },
+        {
+          "name": "Ölz Super Soft Sandwich",
+          "qty": "750 g",
+          "eur": 2.99
+        },
+        {
+          "name": "Bresso Frischkäse",
+          "qty": "150 g",
+          "eur": 1.89
+        },
+        {
+          "name": "Knorr Kaiserteller Suppe",
+          "qty": "2 Stück",
+          "eur": 1.98
+        }
+      ]
+    },
+    {
+      "market": "Nur bei zweitem Weg ab Montag 28.09.",
+      "note": "Penny",
+      "items": [
+        {
+          "name": "Butternuss-Kürbis",
+          "qty": "1 kg",
+          "eur": 0.99
+        },
+        {
+          "name": "Schärdinger Käsescheiben",
+          "qty": "150 g",
+          "eur": 1.39
+        },
+        {
+          "name": "Pflücksalat oder Rucola",
+          "qty": "125 g",
+          "eur": 0.99
+        },
+        {
+          "name": "Satsumas",
+          "qty": "1 kg",
+          "eur": 1.39
+        }
+      ]
+    }
+  ],
+  "pantry": [
+    "Spaghetti 500 g",
+    "Nudeln 500 g",
+    "Reis 300 g",
+    "Kartoffeln 2 kg",
+    "Semmelbrösel",
+    "Mehl",
+    "Butter",
+    "Salz, Pfeffer",
+    "Paprikapulver, Majoran, Oregano",
+    "Knoblauch",
+    "Essig",
+    "Suppenwürze",
+    "Zucker und Staubzucker",
+    "Muskat"
+  ]
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Einkaufswoche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Alle Wochen</a>
+  <div id="app"><p class="lede">Wird geladen …</p></div>
+  <footer id="foot" hidden></footer>
+</div>
+
+<script>
+(function(){
+  var app = document.getElementById("app");
+  var foot = document.getElementById("foot");
+
+  function el(tag, cls, text){
+    var n = document.createElement(tag);
+    if(cls) n.className = cls;
+    if(text != null) n.textContent = text;
+    return n;
+  }
+  function eur(n){ return Number(n).toFixed(2).replace(".", ","); }
+  function deDate(iso){
+    var p = String(iso).split("-");
+    if(p.length !== 3) return iso;
+    return p[2] + "." + p[1] + "." + p[0];
+  }
+  function deShort(iso){
+    var p = String(iso).split("-");
+    if(p.length !== 3) return iso;
+    return p[2] + "." + p[1] + ".";
+  }
+  function fail(text){
+    app.textContent = "";
+    app.appendChild(el("p", "notice", text));
+  }
+
+  var params = new URLSearchParams(location.search);
+  var id = params.get("w") || "";
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(id)){
+    fail("Keine gültige Woche angegeben. Zurück zur Übersicht und eine Woche auswählen.");
+    return;
+  }
+
+  fetch("data/" + id + ".json", {cache:"no-cache"})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(build)
+    .catch(function(){
+      fail("Die Daten für " + deDate(id) + " konnten nicht geladen werden. Prüfe, ob data/" + id + ".json existiert. "
+        + "Beim Öffnen direkt von der Festplatte blockiert der Browser das Laden — dafür einen lokalen Server oder GitHub Pages verwenden.");
+    });
+
+  function build(d){
+    document.title = (d.title || "Einkaufswoche") + " – Einkaufswochen";
+    app.textContent = "";
+
+    /* ---- Kopf ---- */
+    var head = el("header", "page");
+    var kick = [];
+    if(d.region) kick.push(d.region);
+    if(d.created) kick.push("erstellt am " + deDate(d.created));
+    head.appendChild(el("p", "kicker", kick.join(" · ")));
+    head.appendChild(el("h1", null, d.title || "Einkaufswoche"));
+
+    if(d.status && d.status.length){
+      var st = el("div", "status");
+      d.status.forEach(function(s){
+        var row = el("div");
+        row.appendChild(el("b", null, s.market));
+        row.appendChild(el("span", "state-" + (s.state || "ok"), s.note || ""));
+        st.appendChild(row);
+      });
+      head.appendChild(st);
+    }
+    app.appendChild(head);
+
+    /* ---- Angebote ---- */
+    if(d.deals && d.deals.length) app.appendChild(deals(d));
+
+    /* ---- Menü ---- */
+    if(d.menu && d.menu.days && d.menu.days.length) app.appendChild(menu(d.menu));
+
+    /* ---- Einkaufsliste ---- */
+    if(d.shopping && d.shopping.length) app.appendChild(shopping(d));
+
+    /* ---- Vorrat ---- */
+    if(d.pantry && d.pantry.length){
+      var sec = el("section");
+      sec.appendChild(el("h2", null, "Vorrat prüfen"));
+      var box = el("div", "stock");
+      d.pantry.forEach(function(p){ box.appendChild(el("p", null, p)); });
+      sec.appendChild(box);
+      app.appendChild(sec);
+    }
+
+    /* ---- Fuß ---- */
+    var f = [];
+    if(d.sources && d.sources.length) f.push("Quellen: " + d.sources.join(", ") + ".");
+    f.push("Alle Preise sind Richtwerte und können je nach Filiale abweichen. Vor dem Einkauf gegenprüfen.");
+    if(d.notes) f.push(d.notes);
+    foot.appendChild(el("p", null, f.join(" ")));
+    foot.hidden = false;
+  }
+
+  function deals(d){
+    var sec = el("section");
+    sec.appendChild(el("h2", null, "Top-Angebote"));
+    sec.appendChild(el("p", "lede", d.dealsNote ||
+      "Nach Ersparnis sortiert. Preise sind Richtwerte aus Flugblatt-Daten, keine Kassenpreise."));
+
+    var rows = d.deals.map(function(x){
+      var s = (x.price != null && x.regular) ? Math.round((1 - x.price / x.regular) * 100) : null;
+      return {d:x, saving:s};
+    }).sort(function(a,b){
+      if(a.saving == null && b.saving == null) return 0;
+      if(a.saving == null) return 1;
+      if(b.saving == null) return -1;
+      return b.saving - a.saving;
+    });
+
+    var cats = [];
+    rows.forEach(function(r){
+      if(r.d.category && cats.indexOf(r.d.category) === -1) cats.push(r.d.category);
+    });
+
+    var tools = el("div", "tools");
+    var satLabel = el("label");
+    var sat = document.createElement("input"); sat.type = "checkbox";
+    satLabel.appendChild(sat);
+    satLabel.appendChild(el("span", null, "Nur zeigen, was noch am Samstag gilt"));
+    tools.appendChild(satLabel);
+
+    var sel = document.createElement("select");
+    sel.appendChild(new Option("Alle Kategorien", ""));
+    cats.sort().forEach(function(c){ sel.appendChild(new Option(c, c)); });
+    if(cats.length) tools.appendChild(sel);
+
+    var counter = el("span", "num");
+    tools.appendChild(counter);
+    sec.appendChild(tools);
+
+    var scroller = el("div", "scroller");
+    var table = document.createElement("table");
+    var thead = document.createElement("thead");
+    var htr = document.createElement("tr");
+    [["Produkt",""],["Markt",""],["Aktion","p"],["Normal","p"],["Ersparnis","p"],["Gültig",""]]
+      .forEach(function(h){
+        var th = el("th", h[1], h[0]); htr.appendChild(th);
+      });
+    thead.appendChild(htr); table.appendChild(thead);
+
+    var tbody = document.createElement("tbody");
+    rows.forEach(function(r){
+      var x = r.d;
+      var tr = document.createElement("tr");
+      tr.dataset.sat = x.untilSaturday === false ? "0" : "1";
+      tr.dataset.cat = x.category || "";
+
+      var name = el("td");
+      name.appendChild(document.createTextNode(x.product));
+      if(x.unit) name.appendChild(el("span", "unit", x.unit));
+      tr.appendChild(name);
+
+      tr.appendChild(el("td", null, x.market));
+      tr.appendChild(el("td", "p num", x.price != null ? eur(x.price) : "—"));
+      tr.appendChild(el("td", "p num old", x.regular ? eur(x.regular) : "—"));
+      tr.appendChild(el("td", "p save", r.saving != null ? "−" + r.saving + " %" : "—"));
+
+      var v = el("td");
+      if(x.validFrom){
+        v.appendChild(el("span", "flag", deShort(x.validFrom) + "–" + deShort(x.validUntil)));
+      } else {
+        v.appendChild(document.createTextNode("bis " + deShort(x.validUntil)));
+      }
+      tr.appendChild(v);
+
+      /* Spaltenlabels, damit die Tabelle am Handy als Karten lesbar ist */
+      var LABELS = ["Produkt", "Markt", "Aktion", "Normal", "Ersparnis", "Gültig"];
+      Array.prototype.forEach.call(tr.cells, function(td, i){ td.dataset.label = LABELS[i]; });
+
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    scroller.appendChild(table);
+    sec.appendChild(scroller);
+
+    function apply(){
+      var onlySat = sat.checked, cat = sel.value, shown = 0;
+      Array.prototype.forEach.call(tbody.rows, function(tr){
+        var hide = (onlySat && tr.dataset.sat !== "1") || (cat && tr.dataset.cat !== cat);
+        tr.hidden = hide;
+        if(!hide) shown++;
+      });
+      counter.textContent = shown + " von " + tbody.rows.length + " Angeboten";
+    }
+    sat.addEventListener("change", apply);
+    sel.addEventListener("change", apply);
+    apply();
+
+    if(d.flatPrices) sec.appendChild(el("p", "lede", d.flatPrices));
+    return sec;
+  }
+
+  function menu(m){
+    var sec = el("section");
+    sec.appendChild(el("h2", null, m.title || "Wochenmenü"));
+    var lede = [];
+    if(m.from && m.to) lede.push(deShort(m.from) + " bis " + deShort(m.to));
+    if(m.servings) lede.push(m.servings + " Personen");
+    if(m.note) lede.push(m.note);
+    sec.appendChild(el("p", "lede", lede.join(", ")));
+
+    var days = el("div", "days");
+    m.days.forEach(function(day){
+      var row = el("div", "day");
+      var left = el("div");
+      left.appendChild(el("span", "when", day.day));
+      if(day.minutes) left.appendChild(el("span", "mins", day.minutes + " Minuten"));
+      row.appendChild(left);
+
+      var right = el("div");
+      right.appendChild(el("h3", null, day.title));
+      if(day.ingredients) right.appendChild(el("p", "ing", day.ingredients.join(" · ")));
+      if(day.deals && day.deals.length) right.appendChild(el("p", "uses", "Aktion: " + day.deals.join(", ")));
+
+      if(day.steps && day.steps.length){
+        var det = el("details", "recipe");
+        det.appendChild(el("summary"));
+        var ol = document.createElement("ol");
+        day.steps.forEach(function(s){ ol.appendChild(el("li", null, s)); });
+        det.appendChild(ol);
+        right.appendChild(det);
+      }
+      row.appendChild(right);
+      days.appendChild(row);
+    });
+    sec.appendChild(days);
+    if(m.reuse) sec.appendChild(el("p", "lede", m.reuse));
+    return sec;
+  }
+
+  function shopping(d){
+    var sec = el("section");
+    sec.appendChild(el("h2", null, "Einkaufsliste"));
+    sec.appendChild(el("p", "lede",
+      "Abhaken bleibt auf diesem Gerät gespeichert. Die Summe rechnet mit, was noch offen ist."));
+
+    var boxes = [];
+    d.shopping.forEach(function(group, gi){
+      var block = el("div", "market");
+      var h = el("h3", null, group.market);
+      if(group.note) h.appendChild(el("span", null, group.note));
+      block.appendChild(h);
+
+      var ul = el("ul", "list");
+      (group.items || []).forEach(function(item, ii){
+        var li = document.createElement("li");
+        var label = document.createElement("label");
+        var cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.dataset.key = gi + ":" + ii;
+        var txt = el("span");
+        txt.appendChild(document.createTextNode(item.name));
+        if(item.qty) txt.appendChild(el("span", "qty", item.qty));
+        var price = el("span", "price", item.eur != null ? eur(item.eur) : "");
+        price.dataset.eur = item.eur != null ? item.eur : 0;
+        label.appendChild(cb); label.appendChild(txt); label.appendChild(price);
+        li.appendChild(label); ul.appendChild(li);
+        boxes.push(cb);
+      });
+      block.appendChild(ul);
+      sec.appendChild(block);
+    });
+
+    var totals = el("div", "totals");
+    var openWrap = el("div");
+    var openSum = el("span", "big num", "0,00");
+    openWrap.appendChild(openSum); openWrap.appendChild(el("small", null, "noch zu kaufen"));
+    var allWrap = el("div");
+    var allSum = el("span", "big num", "0,00");
+    allWrap.appendChild(allSum); allWrap.appendChild(el("small", null, "Liste gesamt"));
+    var reset = el("button", null, "Alle Haken zurücksetzen");
+    reset.type = "button";
+    totals.appendChild(openWrap); totals.appendChild(allWrap); totals.appendChild(reset);
+    sec.appendChild(totals);
+
+    var KEY = "einkauf:" + (d.id || "unbekannt");
+
+    function render(){
+      var open = 0, all = 0;
+      boxes.forEach(function(b){
+        var li = b.closest("li");
+        var v = parseFloat(li.querySelector(".price").dataset.eur) || 0;
+        all += v;
+        if(b.checked){ li.classList.add("done"); } else { li.classList.remove("done"); open += v; }
+      });
+      openSum.textContent = eur(open);
+      allSum.textContent = eur(all);
+    }
+    function save(){
+      try{
+        var on = boxes.filter(function(b){ return b.checked; }).map(function(b){ return b.dataset.key; });
+        localStorage.setItem(KEY, JSON.stringify(on));
+      }catch(e){ /* Speicher gesperrt – Liste funktioniert trotzdem */ }
+    }
+    function load(){
+      try{
+        var raw = localStorage.getItem(KEY);
+        if(!raw) return;
+        var on = JSON.parse(raw);
+        if(!Array.isArray(on)) return;
+        boxes.forEach(function(b){ b.checked = on.indexOf(b.dataset.key) !== -1; });
+      }catch(e){ /* kaputter Eintrag wird ignoriert */ }
+    }
+
+    boxes.forEach(function(b){ b.addEventListener("change", function(){ render(); save(); }); });
+    reset.addEventListener("click", function(){
+      boxes.forEach(function(b){ b.checked = false; });
+      render(); save();
+    });
+
+    load(); render();
+    return sec;
+  }
+})();
+</script>
+</body>
+</html>
