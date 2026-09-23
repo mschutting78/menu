@@ -107,6 +107,16 @@ die Abschnitte tragen dafür die IDs `angebote`, `menue` und `liste`.
 Die Summenzeile der Einkaufsliste klebt am unteren Rand, damit beim Scrollen durch die
 Liste immer sichtbar bleibt, was noch offen ist. "Liste gesamt" wird dort ausgeblendet.
 
+## Cache
+
+`index.html` und `woche.html` binden Stylesheet und Icons mit einer Versionsnummer ein:
+`assets/style.css?v=3`. Browser merken sich diese Dateien sonst tagelang, und Änderungen
+am Aussehen kommen am Handy nicht an.
+
+**Nach jeder Änderung an `assets/style.css` oder `assets/icons.js` die Zahl in beiden
+HTML-Dateien um eins erhöhen.** Die JSON-Dateien brauchen das nicht, die werden ohnehin
+mit `cache:"no-cache"` geladen.
+
 ## Piktogramme
 
 `assets/icons.js` bringt rund 30 Inline-SVG-Symbole mit. Keine externen Anfragen, keine
