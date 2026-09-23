@@ -205,14 +205,15 @@ section[role="tabpanel"]{margin-top:1.75rem}
   section[role="tabpanel"][hidden]{display:block!important}
 }
 
-/* Piktogramme - bewusst klein: an die Textgroesse gebunden und nach oben gedeckelt,
-   damit sie auch bei hochskalierter Systemschrift am Handy dezent bleiben. */
+/* Piktogramme - an die Textgroesse gebunden und nach oben gedeckelt, damit sie bei
+   hochskalierter Systemschrift nicht mitwachsen. 13 px ist die Mitte zwischen
+   "zu klobig" (15 px, deckend) und "unsichtbar" (10 px, halbtransparent). */
 .ico{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
-  width:clamp(9px,.62em,12px);height:clamp(9px,.62em,12px);
-  margin-right:.38em;vertical-align:-.02em;
-  color:var(--ink-soft);opacity:.5}
+  width:clamp(11px,.76em,13px);height:clamp(11px,.76em,13px);
+  margin-right:.4em;vertical-align:-.04em;
+  color:var(--ink-soft);opacity:.8}
 .ico svg{width:100%;height:100%;display:block}
-li.done .ico{opacity:.25}
-.day h3 .ico{width:clamp(10px,.6em,13px);height:clamp(10px,.6em,13px);
-  margin-right:.4em;opacity:.45}
-@media print{.ico{color:#888;opacity:1}}
+li.done .ico{opacity:.3}
+.day h3 .ico{width:clamp(13px,.72em,16px);height:clamp(13px,.72em,16px);
+  margin-right:.42em;opacity:.7}
+@media print{.ico{color:#777;opacity:1}}

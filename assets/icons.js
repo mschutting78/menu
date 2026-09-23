@@ -116,7 +116,7 @@
     var span = document.createElement("span");
     span.className = "ico";
     span.setAttribute("aria-hidden", "true");
-    span.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">' + inner + "</svg>";
+    span.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">' + inner + "</svg>";
     return span;
   }
 
