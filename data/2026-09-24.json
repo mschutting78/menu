@@ -7,7 +7,7 @@
     "aktionsradar.at",
     "flugblattangebote.at"
   ],
-  "notes": "Erhebung am Montag 21.09., Nachlauf am Mittwoch 23.09. abends. Das Billa-Flugblatt ab 24.09. war auch am Mittwoch noch nicht inhaltlich veröffentlicht; die Kärntner SPAR-Flugblätter liegen nur als Bild-PDF vor. Vollständig wird die Woche erst mit einem Lauf am Donnerstag früh.",
+  "notes": "Erhebung am Montag 21.09., Nachlauf am Mittwoch 23.09. abends. Die SPAR-Preise stammen aus dem Blätterkatalog des Flugblatts KW 39 und wurden von den Seiten abgelesen — im Markt gegenprüfen. Billa hatte am Mittwoch abends auch im eigenen Blätterkatalog noch die Vorwoche stehen; die Woche ab 24.09. fehlt daher vollständig.",
   "status": [
     {
       "market": "Penny",
@@ -16,13 +16,13 @@
     },
     {
       "market": "Spar / Eurospar",
-      "state": "partial",
-      "note": "Monatssparer bis 30.09. plus Flugblatt KW 39 (24.09.–07.10.), davon nur die Getränke-Highlights lesbar"
+      "state": "ok",
+      "note": "Flugblatt KW 39 (24.09.–07.10.) Seite für Seite ausgelesen, dazu Monatssparer bis 30.09."
     },
     {
       "market": "Billa / Billa Plus",
       "state": "missing",
-      "note": "Flugblatt 24.–30.09. angekündigt, Inhalt am Mi 23.09. abends noch nicht veröffentlicht"
+      "note": "am Mi 23.09. abends steht im Blätterkatalog auf billa.at noch die Vorwoche (17.–23.09.), BILLA wie BILLA PLUS — das neue Flugblatt erscheint erst am Donnerstag"
     },
     {
       "market": "Lidl",
@@ -276,28 +276,315 @@
       "category": "Brot & Gebäck"
     },
     {
-      "product": "Wieselburger Bier alkoholfrei",
-      "unit": "0,5 l, −50 % lt. Flugblatt",
+      "product": "SPAR Faschiertes gemischt",
+      "unit": "500 g",
       "market": "Spar",
-      "price": 4.02,
+      "price": 3.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst",
+      "regular": 6.99
+    },
+    {
+      "product": "AIA Hendl Filetschnitzel",
+      "unit": "400 g, ab 2 Pkg",
+      "market": "Spar",
+      "price": 3.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst",
+      "regular": 4.99
+    },
+    {
+      "product": "SPAR Feinstes Hendl-Innenfilet",
+      "unit": "300 g, ab 2 Pkg",
+      "market": "Spar",
+      "price": 3.89,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst",
+      "regular": 5.19
+    },
+    {
+      "product": "S-BUDGET Hendl Unterkeulen",
+      "unit": "800 g, ab 2 Pkg",
+      "market": "Spar",
+      "price": 5.69,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst",
+      "regular": 7.19
+    },
+    {
+      "product": "Tannenhof Schwarzwälder Rohschinken",
+      "unit": "100 g",
+      "market": "Spar",
+      "price": 2.19,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst",
+      "regular": 2.59
+    },
+    {
+      "product": "Farmer- oder Burgunderschinken",
+      "unit": "100 g",
+      "market": "Spar",
+      "price": 1.69,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Frankfurter",
+      "unit": "1 kg",
+      "market": "Spar",
+      "price": 6.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Karreebraten",
+      "unit": "je kg",
+      "market": "Spar",
+      "price": 6.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Rindsschnitzel",
+      "unit": "je kg",
+      "market": "Spar",
+      "price": 16.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Putenminifilet",
+      "unit": "je kg",
+      "market": "Spar",
+      "price": 13.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "S-BUDGET Cabanossi",
+      "unit": "300 g",
+      "market": "Spar",
+      "price": 2.39,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Schärdinger Moosbacher",
+      "unit": "100 g",
+      "market": "Spar",
+      "price": 1.29,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse",
+      "regular": 2.15
+    },
+    {
+      "product": "Bio-Rahmbutter",
+      "unit": "250 g",
+      "market": "Spar",
+      "price": 1.59,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse",
+      "regular": 2.09
+    },
+    {
+      "product": "Berg Bauer Bergkäse",
+      "unit": "100 g",
+      "market": "Spar",
+      "price": 1.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Schärdinger Milchmann Vollmilch",
+      "unit": "1 l, 1+1 gratis",
+      "market": "Spar",
+      "price": 0.92,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Schärdinger Joghurtraum",
+      "unit": "400 g, 1+1 gratis",
+      "market": "Spar",
+      "price": 0.61,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Schärdinger Mozzarella",
+      "unit": "2+2 gratis",
+      "market": "Spar",
+      "price": 0.79,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "S-BUDGET Cottage Cheese",
+      "unit": "250 g",
+      "market": "Spar",
+      "price": 1.49,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "S-BUDGET Eier aus Freilandhaltung",
+      "unit": "10 Stück",
+      "market": "Spar",
+      "price": 3.32,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "SPAR Lachsfilets aus Norwegen",
+      "unit": "250 g, ab 2 Pkg",
+      "market": "Spar",
+      "price": 5.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fisch",
+      "regular": 6.99
+    },
+    {
+      "product": "SPAR MSC Gelbflossen-Thunfisch",
+      "unit": "195 g",
+      "market": "Spar",
+      "price": 1.79,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fisch",
+      "regular": 2.49
+    },
+    {
+      "product": "S-BUDGET ASC Forelle",
+      "unit": "je kg",
+      "market": "Spar",
+      "price": 12.9,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fisch"
+    },
+    {
+      "product": "S-BUDGET MSC Heringsfilets",
+      "unit": "200 g",
+      "market": "Spar",
+      "price": 1.59,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Fisch"
+    },
+    {
+      "product": "SPAR Toast",
+      "unit": "Packung",
+      "market": "Spar",
+      "price": 2.37,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Brot & Gebäck",
+      "regular": 3.32
+    },
+    {
+      "product": "Bio-Baguette",
+      "unit": "1 Stück, bei 3 Stück je",
+      "market": "Spar",
+      "price": 0.62,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Brot & Gebäck",
+      "regular": 0.94
+    },
+    {
+      "product": "Butter-Croissant",
+      "unit": "1 Stück, bei 3 Stück je",
+      "market": "Spar",
+      "price": 0.73,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Brot & Gebäck",
+      "regular": 1.1
+    },
+    {
+      "product": "SPAR Kristallzucker",
+      "unit": "1 kg, 2+1 gratis",
+      "market": "Spar",
+      "price": 0.88,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Konserven & Suppen",
+      "regular": 1.32
+    },
+    {
+      "product": "Iglo Kartoffelprodukte",
+      "unit": "Packung, 2+1 gratis",
+      "market": "Spar",
+      "price": 3.32,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Konserven & Suppen",
+      "regular": 4.99
+    },
+    {
+      "product": "Iglo Hühner Sticks oder Crispy Chicken",
+      "unit": "220–250 g, 1+1 gratis",
+      "market": "Spar",
+      "price": 2.89,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Konserven & Suppen",
+      "regular": 5.79
+    },
+    {
+      "product": "Kürbiskernöl",
+      "unit": "0,5 l",
+      "market": "Spar",
+      "price": 5.99,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Konserven & Suppen",
+      "regular": 6.99
+    },
+    {
+      "product": "Puntigamer das \"bierige\" Bier",
+      "unit": "0,5 l",
+      "market": "Spar",
+      "price": 0.77,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Getränke",
+      "regular": 1.54
+    },
+    {
+      "product": "Ottakringer Helles / Lager",
+      "unit": "0,5 l, 12+12 gratis",
+      "market": "Spar",
+      "price": 0.72,
       "validFrom": "2026-09-24",
       "validUntil": "2026-10-07",
       "category": "Getränke"
     },
     {
       "product": "Heineken Lager / alkoholfrei / Desperados",
-      "unit": "0,33 l, −31 % lt. Flugblatt",
+      "unit": "0,33 l",
       "market": "Spar",
       "price": 1.49,
-      "validFrom": "2026-09-24",
-      "validUntil": "2026-10-07",
-      "category": "Getränke"
-    },
-    {
-      "product": "Ottakringer Helles / Lager / Frucade Radler",
-      "unit": "0,5 l, 12+12 gratis",
-      "market": "Spar",
-      "price": 0.72,
       "validFrom": "2026-09-24",
       "validUntil": "2026-10-07",
       "category": "Getränke"

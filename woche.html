@@ -82,39 +82,69 @@
     }
     app.appendChild(head);
 
-    /* ---- Sprungleiste, klebt am Handy oben ---- */
-    var jump = el("nav", "jump");
-    function jumpLink(id, label){
-      var a = el("a", null, label);
-      a.href = "#" + id;
-      jump.appendChild(a);
-    }
-
+    /* ---- Reiter ---- */
     var hasDeals = !!(d.deals && d.deals.length);
     var hasMenu = !!(d.menu && d.menu.days && d.menu.days.length);
     var hasShop = !!(d.shopping && d.shopping.length);
-    if(hasDeals) jumpLink("angebote", "Angebote");
-    if(hasMenu) jumpLink("menue", "Men\u00fc");
-    if(hasShop) jumpLink("liste", "Liste");
-    if(jump.childNodes.length > 1) app.appendChild(jump);
 
-    /* ---- Angebote ---- */
-    if(hasDeals){ var sD = deals(d); sD.id = "angebote"; app.appendChild(sD); }
+    var tabbar = el("nav", "tabs");
+    tabbar.setAttribute("role", "tablist");
+    tabbar.setAttribute("aria-label", "Bereiche");
+    var buttons = [], panels = [];
 
-    /* ---- Menü ---- */
-    if(hasMenu){ var sM = menu(d.menu); sM.id = "menue"; app.appendChild(sM); }
+    function addTab(id, label, section){
+      section.id = id;
+      section.setAttribute("role", "tabpanel");
+      section.setAttribute("aria-labelledby", "tab-" + id);
+      var b = el("button", "tab", label);
+      b.type = "button";
+      b.id = "tab-" + id;
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-controls", id);
+      b.dataset.target = id;
+      tabbar.appendChild(b);
+      buttons.push(b);
+      panels.push(section);
+    }
 
-    /* ---- Einkaufsliste ---- */
-    if(hasShop){ var sS = shopping(d); sS.id = "liste"; app.appendChild(sS); }
+    if(hasDeals) addTab("angebote", "Top-Angebote", deals(d));
+    if(hasMenu) addTab("menue", "Wochenmen\u00fc", menu(d.menu));
+    if(hasShop) addTab("liste", "Einkaufsliste", shopping(d));
 
-    /* ---- Vorrat ---- */
-    if(d.pantry && d.pantry.length){
-      var sec = el("section");
-      sec.appendChild(el("h2", null, "Vorrat prüfen"));
+    /* Vorrat gehoert inhaltlich zur Einkaufsliste und wandert in deren Reiter */
+    if(hasShop && d.pantry && d.pantry.length){
+      var shopPanel = panels[panels.length - 1];
+      shopPanel.appendChild(el("h2", null, "Vorrat pr\u00fcfen"));
       var box = el("div", "stock");
-      d.pantry.forEach(function(p){ box.appendChild(el("p", null, p)); });
-      sec.appendChild(box);
-      app.appendChild(sec);
+      d.pantry.forEach(function(x){ box.appendChild(el("p", null, x)); });
+      shopPanel.appendChild(box);
+    }
+
+    var TABKEY = "reiter:" + (d.id || "unbekannt");
+    function select(id, remember){
+      buttons.forEach(function(b){
+        b.setAttribute("aria-selected", b.dataset.target === id ? "true" : "false");
+      });
+      panels.forEach(function(s){ s.hidden = s.id !== id; });
+      if(remember){ try{ localStorage.setItem(TABKEY, id); }catch(e){ /* Speicher gesperrt */ } }
+    }
+    buttons.forEach(function(b){
+      b.addEventListener("click", function(){
+        select(b.dataset.target, true);
+        window.scrollTo(0, 0);
+      });
+    });
+
+    if(buttons.length > 1) app.appendChild(tabbar);
+    panels.forEach(function(s){ app.appendChild(s); });
+
+    if(buttons.length){
+      var start = buttons[0].dataset.target;
+      try{
+        var saved = localStorage.getItem(TABKEY);
+        if(saved && buttons.some(function(b){ return b.dataset.target === saved; })) start = saved;
+      }catch(e){ /* Speicher gesperrt */ }
+      select(start, false);
     }
 
     /* ---- Fuß ---- */

@@ -25,9 +25,21 @@ Montag lohnt nur, wenn Märkte mit Wochenstart Montag dazukommen.
 - **Lidl** nur aufnehmen, wenn ein Artikel dort deutlich günstiger ist als bei den
   anderen, oder wenn er sonst nirgends im Angebot ist.
 
-Brauchbare Quellen: penny.at/angebote, billa.at/aktionen, spar.at/aktionen/kaernten,
-rabattkompass.at, flugblattangebote.at, marktguru.at, aktionsradar.at. Die Spar-Flugblätter
-für Kärnten liegen meist nur als Bild-PDF vor und lassen sich per Web-Abruf nicht auslesen.
+**Quellen, nach Brauchbarkeit geordnet** (Stand 23.09.2026 geprüft):
+
+| Markt | Quelle | Form |
+|---|---|---|
+| Penny | `penny.at/angebote` | Text, direkt auswertbar, oft Tage im Voraus |
+| Billa | `shop.billa.at/aktionen` | Text mit Aktions- und Normalpreis, wechselt Donnerstag |
+| Spar | `spar.at/aktionen/kaernten` → Flugblatt öffnen | nur Bildseiten, im Browser durchblättern und ablesen |
+| Lidl | `lidl.at/c/flugblatt/…` | nur Bildseiten; `rabattkompass.at` liefert Text ohne Normalpreise |
+
+Eine offene Schnittstelle für österreichische Flugblätter gibt es nicht. Die Aggregatoren
+(marktguru, aktionsfinder, kimbino, prospektmaschine, flugblattangebote, rabattkompass,
+aktionsradar) zeigen die Flugblätter ebenfalls als Bilder; ihre Textseiten enthalten nur
+einen Bruchteil der Artikel und selten Normalpreise. Für Spar und Lidl bleibt daher das
+Ablesen aus dem Blätterkatalog. Dabei die großen Preisangaben nehmen und das
+Kleingedruckte nur, wenn es eindeutig lesbar ist.
 
 **Preise niemals schätzen oder aus der Vorwoche übernehmen.** Was nicht belegbar ist,
 kommt nicht in die Datei. Stattdessen den Markt in `status[]` auf `partial` oder `missing`
