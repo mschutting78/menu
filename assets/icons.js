@@ -7,54 +7,54 @@
 
   var ICONS = {
     /* ---- Fleisch, Fisch ---- */
-    fleisch: '<path d="M4.6 11C6 7.2 9.4 4.8 13.2 4.8c3.7 0 6.3 2.3 6.3 5.5 0 4.6-4.2 9.4-9.3 9.4-3.5 0-6.2-2.1-6.2-5.1 0-1.3.2-2.5.6-3.6z"/><circle cx="15" cy="9.8" r="1.9" opacity=".4"/>',
-    hendl: '<circle cx="15.6" cy="8.4" r="5.4"/><path d="M12.1 12.3 7.4 17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="6.2" cy="16.2" r="2.1"/><circle cx="8" cy="18.1" r="2.1"/>',
-    wurst: '<path d="M5.5 6.5c4.5-2 9 .5 11 4s2 8-1.5 9.5-8-.5-10-4-3-8 .5-9.5z" opacity=".95"/><path d="M8.6 8.2c2.8-.9 5.4.6 6.7 3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".45"/>',
-    fisch: '<path d="M3 12c3.4-4.2 7.2-6.2 11.4-6.2 2.8 0 5 .9 6.6 2.5-1.6 1.6-2.4 2.9-2.4 3.7s.8 2.1 2.4 3.7c-1.6 1.6-3.8 2.5-6.6 2.5C10.2 18.2 6.4 16.2 3 12z"/><circle cx="8.4" cy="10.6" r="1.1" opacity=".45"/>',
+    fleisch: '<path d="M4.8 12.2c0-3.9 3.3-6.6 7.4-6.6 3.5 0 6 2 6 5 0 4.2-3.8 8.4-8.3 8.4-3.1 0-5.1-1.9-5.1-4.5z"/><circle cx="14.4" cy="10.4" r="1.5"/>',
+    hendl: '<circle cx="14.8" cy="8.6" r="4.4"/><path d="M11.6 11.8 8 15.4"/><circle cx="6.5" cy="16.5" r="1.7"/><circle cx="8.2" cy="18.2" r="1.7"/>',
+    wurst: '<path d="M6.3 6.8c4-1.6 8.1.6 9.9 3.9s1.1 7.2-2.3 8.6-8.1-.6-9.9-3.9 2.3-7 2.3-8.6z"/>',
+    fisch: '<path d="M3.6 12c3-3.6 6.6-5.4 10.2-5.4 2.5 0 4.5.8 6 2.2-1.4 1.4-2.1 2.4-2.1 3.2s.7 1.8 2.1 3.2c-1.5 1.4-3.5 2.2-6 2.2-3.6 0-7.2-1.8-10.2-5.4z"/><circle cx="8.2" cy="10.8" r=".7"/>',
 
     /* ---- Molkerei ---- */
-    milch: '<path d="M9 2.6h6l3 3.6V21a.8.8 0 0 1-.8.8H6.8A.8.8 0 0 1 6 21V6.2z"/><path d="M9 2.6 6 6.2h12L15 2.6z" opacity=".45"/>',
-    kaese: '<path d="M3 13.6 13.4 6.2 21 10.2v7.4a.8.8 0 0 1-.8.8H3.8a.8.8 0 0 1-.8-.8z"/><circle cx="8" cy="15.4" r="1.4" opacity=".4"/><circle cx="14.6" cy="13.6" r="1.1" opacity=".4"/><circle cx="17.6" cy="16.4" r="1" opacity=".4"/>',
-    butter: '<path d="M3.4 9.6h13.2l4 2.6v6.2a.8.8 0 0 1-.8.8H3.4a.8.8 0 0 1-.8-.8V10.4a.8.8 0 0 1 .8-.8z"/><path d="M16.6 9.6 20.6 12.2H8.4z" opacity=".45"/>',
-    ei: '<ellipse cx="12" cy="13.4" rx="6" ry="8"/>',
-    joghurt: '<path d="M6.4 7.6h11.2l-1.4 12.6a.8.8 0 0 1-.8.7H8.6a.8.8 0 0 1-.8-.7z"/><rect x="5.4" y="4.2" width="13.2" height="3.4" rx="1"/>',
+    milch: '<path d="M8.8 3.6h6.4l2.8 3.4v12.8a.8.8 0 0 1-.8.8H6.8a.8.8 0 0 1-.8-.8V7z"/><path d="M8.8 3.6 6 7M15.2 3.6 18 7"/>',
+    kaese: '<path d="M3.8 13.8 13.6 7l6.6 3.6v7a.8.8 0 0 1-.8.8H4.6a.8.8 0 0 1-.8-.8z"/><circle cx="8.2" cy="15.4" r="1"/><circle cx="14.8" cy="13.8" r=".8"/>',
+    butter: '<path d="M4 10.6h12.4l3.8 2.3v5.4a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8z"/><path d="M16.4 10.6 20.2 12.9H8.2"/>',
+    ei: '<path d="M12 20.4c-3.2 0-5.4-2.2-5.4-5.2 0-3.9 2.5-11.4 5.4-11.4s5.4 7.5 5.4 11.4c0 3-2.2 5.2-5.4 5.2z"/>',
+    joghurt: '<path d="M7 8.4h10l-1.2 11.2a.8.8 0 0 1-.8.7H9a.8.8 0 0 1-.8-.7z"/><rect x="6" y="5.2" width="12" height="3.2" rx=".8"/>',
 
     /* ---- Brot, Grundnahrung ---- */
-    brot: '<path d="M4 11.8c0-3.4 3.6-5.4 8-5.4s8 2 8 5.4v5.4a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8z"/><path d="M8.6 9.6 7 13.4M12 9.2l-1.6 4M15.4 9.6l-1.6 3.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".45"/>',
-    nudeln: '<path d="M3.4 12.6h17.2c0 4.4-3.8 7.4-8.6 7.4s-8.6-3-8.6-7.4z"/><path d="M7 10.4c0-2.6 1.4-4.4 1.4-6.4M12 10.4c0-2.6 1.4-4.4 1.4-6.4M17 10.4c0-2.6 1.4-4.4 1.4-6.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-    reis: '<path d="M3.6 12h16.8c0 4.4-3.8 7.6-8.4 7.6S3.6 16.4 3.6 12z"/><ellipse cx="9" cy="8" rx="1.5" ry="2.4" transform="rotate(-25 9 8)" opacity=".55"/><ellipse cx="13" cy="6.6" rx="1.5" ry="2.4" transform="rotate(15 13 6.6)" opacity=".55"/><ellipse cx="16" cy="9" rx="1.5" ry="2.4" transform="rotate(40 16 9)" opacity=".55"/>',
-    mehl: '<path d="M6.6 8.2h10.8v11.6a.8.8 0 0 1-.8.8H7.4a.8.8 0 0 1-.8-.8z"/><path d="M6.6 8.2 8.8 4h6.4l2.2 4.2z" opacity=".5"/>',
-    dose: '<rect x="6" y="5.6" width="12" height="13.4" rx="1.4"/><path d="M6 9.4h12M6 15.2h12" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".4"/>',
-    oel: '<path d="M9.6 2.6h4.8v3.2l3 4.4v9.2a1 1 0 0 1-1 1H7.6a1 1 0 0 1-1-1v-9.2l3-4.4z"/><path d="M9 13.4h6v3.6H9z" opacity=".4"/>',
-    zucker: '<rect x="4.6" y="8.6" width="14.8" height="11" rx="1.2"/><path d="M4.6 8.6 7 4.6h10l2.4 4z" opacity=".5"/>',
+    brot: '<path d="M4.6 12.4c0-3.1 3.3-5.1 7.4-5.1s7.4 2 7.4 5.1v4.7a.8.8 0 0 1-.8.8H5.4a.8.8 0 0 1-.8-.8z"/><path d="M9 10.6 7.7 13.5M12.2 10.2l-1.3 3.2M15.4 10.6l-1.3 2.9"/>',
+    nudeln: '<path d="M4.2 12.8h15.6c0 3.9-3.5 6.7-7.8 6.7s-7.8-2.8-7.8-6.7z"/><path d="M8.2 10.6c0-2.3 1.2-3.9 1.2-5.6M12 10.6c0-2.3 1.2-3.9 1.2-5.6M15.8 10.6c0-2.3 1.2-3.9 1.2-5.6"/>',
+    reis: '<path d="M4.4 12.8h15.2c0 3.8-3.4 6.6-7.6 6.6s-7.6-2.8-7.6-6.6z"/><ellipse cx="9.2" cy="8.6" rx="1.2" ry="2" transform="rotate(-25 9.2 8.6)"/><ellipse cx="13" cy="7.4" rx="1.2" ry="2" transform="rotate(15 13 7.4)"/><ellipse cx="15.8" cy="9.6" rx="1.2" ry="2" transform="rotate(40 15.8 9.6)"/>',
+    mehl: '<path d="M7.2 9h9.6v10.2a.8.8 0 0 1-.8.8H8a.8.8 0 0 1-.8-.8z"/><path d="M7.2 9 9.2 5.2h5.6L16.8 9"/>',
+    dose: '<rect x="6.6" y="6" width="10.8" height="12.6" rx="1.2"/><path d="M6.6 9.6h10.8M6.6 15h10.8"/>',
+    oel: '<path d="M10.2 3.6h3.6v2.9l2.4 3.6v8.7a1 1 0 0 1-1 1H8.8a1 1 0 0 1-1-1v-8.7l2.4-3.6z"/><path d="M9.2 13.6h5.6"/>',
+    zucker: '<rect x="5" y="9.2" width="14" height="10.2" rx="1"/><path d="M5 9.2 7.1 5.4h9.8L19 9.2"/>',
 
     /* ---- Obst, Gemuese ---- */
-    apfel: '<path d="M12 7.4c-1.6-1.6-4.2-1.8-6 0-2 2-1.8 6 .4 9.2 1.2 1.8 2.6 3 4 3 .6 0 1.1-.2 1.6-.5.5.3 1 .5 1.6.5 1.4 0 2.8-1.2 4-3 2.2-3.2 2.4-7.2.4-9.2-1.8-1.8-4.4-1.6-6 0z"/><path d="M12 7.4V3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.4 5.4c1.4-1.6 3.2-1.8 4.2-1.6.2 1.4-.6 3-2.2 3.4-1 .2-1.6 0-2-.4z" opacity=".5"/>',
-    banane: '<path d="M4 6.6c0 6.4 4.6 11.6 10.6 11.6 2.6 0 4.6-.8 5.8-2-1.6.2-3 0-3-1.4-3.6.6-9.4-2.4-10.4-8.8-.4-1.6-3-1.6-3 .6z"/>',
-    trauben: '<circle cx="12" cy="8.6" r="2.4"/><circle cx="8.6" cy="12.4" r="2.4"/><circle cx="15.4" cy="12.4" r="2.4"/><circle cx="12" cy="15.4" r="2.4"/><circle cx="9.4" cy="18.6" r="2.2"/><circle cx="14.6" cy="18.6" r="2.2"/><path d="M12 6.2V3.4c1.8 0 3-1 3.4-1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
-    zitrone: '<ellipse cx="12" cy="12.6" rx="8.4" ry="6.4" transform="rotate(-20 12 12.6)"/><path d="M19.6 7.4c1-1 1.6-1.4 2.4-1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
-    kuerbis: '<ellipse cx="12" cy="13.6" rx="9" ry="7"/><path d="M12 6.6v14M7.6 7.6c-1 2-1 8 0 12M16.4 7.6c1 2 1 8 0 12" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".4"/><path d="M12 6.6V3.4c2 0 3-.8 3.6-1.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-    erdaepfel: '<ellipse cx="12" cy="12.6" rx="8.6" ry="6.6" transform="rotate(-12 12 12.6)"/><circle cx="9" cy="11" r="1" opacity=".45"/><circle cx="13.4" cy="14.2" r=".9" opacity=".45"/><circle cx="15.2" cy="10.4" r=".8" opacity=".45"/>',
-    karotte: '<path d="M8.4 9.6 18.8 20c-3 2-8.6 1.4-11.6-1.6S5.4 10.6 8.4 9.6z" transform="rotate(180 12 14)"/><path d="M12 8.4V4.6M12 8.4l3.2-2.8M12 8.4 8.8 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-    tomate: '<circle cx="12" cy="14" r="7.4"/><path d="M12 6.6V3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 6.2c1.4-.8 2.6-.8 4 0 1.4-.8 2.6-.8 4 0-.8 1.6-2.2 2.4-4 2.4s-3.2-.8-4-2.4z" opacity=".55"/>',
-    paprika: '<path d="M6 12.6c0-3.4 2.6-5.6 6-5.6s6 2.2 6 5.6c0 4.4-2.6 8-6 8s-6-3.6-6-8z"/><path d="M12 7V4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9.4 4.6c1.6-.6 3.6-.6 5.2 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-    salat: '<path d="M12 20.6c-5 0-9-3.6-9-8 0-1 .2-1.8.6-2.6 1.4.8 2.8 1 4 .6-.6-2 .2-4.2 2-5.6 1 1.4 2.2 2.2 3.4 2.4.4-2 2-3.6 4-4.2.4 2 0 3.8-1 5 1.6.4 3 1.6 3.8 3.2-1.4.8-2.2 2-2.4 3.4 1 .2 1.8.8 2.4 1.6-1.6 2.6-4.6 4.2-7.8 4.2z"/>',
-    zwiebel: '<path d="M12 21c-4 0-6.8-2.6-6.8-6.2C5.2 11 8 7.6 12 4.6c4 3 6.8 6.4 6.8 10.2 0 3.6-2.8 6.2-6.8 6.2z"/><path d="M12 4.6V1.8M9.8 4.4 8 2.4M14.2 4.4 16 2.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>',
-    champignon: '<path d="M3.6 12.6C3.6 8 7.4 4.4 12 4.4s8.4 3.6 8.4 8.2c0 .8-.6 1.4-1.4 1.4H5c-.8 0-1.4-.6-1.4-1.4z"/><path d="M9.6 14v4.6c0 1.2 1 2.2 2.4 2.2s2.4-1 2.4-2.2V14z"/>',
+    apfel: '<path d="M12 8.6c-1.4-1.4-3.7-1.6-5.2 0-1.7 1.7-1.5 5.3.4 8.1 1.1 1.5 2.2 2.6 3.4 2.6.5 0 .9-.1 1.4-.4.4.3.9.4 1.4.4 1.2 0 2.3-1.1 3.4-2.6 1.9-2.8 2.1-6.4.4-8.1-1.5-1.6-3.8-1.4-5.2 0z"/><path d="M12 8.6V5.2"/><path d="M12.4 6.6c1.1-1.3 2.6-1.5 3.6-1.3"/>',
+    banane: '<path d="M4.8 7.2c0 5.6 4.1 10.2 9.4 10.2 2.3 0 4-.7 5.1-1.7-1.5.2-2.6 0-2.6-1.3-3.2.5-8.3-2.1-9.2-7.7-.4-1.4-2.7-1.4-2.7.5z"/>',
+    trauben: '<circle cx="12" cy="9" r="1.8"/><circle cx="9.3" cy="12.1" r="1.8"/><circle cx="14.7" cy="12.1" r="1.8"/><circle cx="12" cy="15.2" r="1.8"/><circle cx="9.7" cy="18.2" r="1.7"/><circle cx="14.3" cy="18.2" r="1.7"/><path d="M12 7.1V4.6c1.5 0 2.5-.8 2.9-1.3"/>',
+    zitrone: '<ellipse cx="12" cy="12.8" rx="7.4" ry="5.6" transform="rotate(-20 12 12.8)"/><path d="M18.6 8c.9-.9 1.4-1.2 2.1-1.4"/>',
+    kuerbis: '<ellipse cx="12" cy="13.8" rx="7.8" ry="6"/><path d="M8.6 8.6c-.8 1.8-.8 7 0 10.4M15.4 8.6c.8 1.8.8 7 0 10.4"/><path d="M12 7.8V4.6c1.7 0 2.6-.6 3.1-1.1"/>',
+    erdaepfel: '<ellipse cx="12" cy="12.8" rx="7.8" ry="6" transform="rotate(-12 12 12.8)"/><circle cx="9.4" cy="11.4" r=".8"/><circle cx="13.4" cy="14.2" r=".7"/>',
+    karotte: '<path d="M9.8 9.8h4.4L12 20.2z"/><path d="M12 9.8V5.8M12 8.2 9.2 5.8M12 8.2l2.8-2.4"/>',
+    tomate: '<circle cx="12" cy="14" r="6.2"/><path d="M12 7.8V5"/><path d="M9.2 6.6c1-.6 1.8-.6 2.8 0 1-.6 1.8-.6 2.8 0"/>',
+    paprika: '<path d="M6.9 13c0-3.1 2.3-5.1 5.1-5.1s5.1 2 5.1 5.1c0 3.9-2.3 7.1-5.1 7.1S6.9 16.9 6.9 13z"/><path d="M12 7.9V5.2"/><path d="M9.9 5.4c1.4-.5 2.8-.5 4.2 0"/>',
+    salat: '<path d="M5 18.8c-.6-6.8 4.6-12.2 13.6-13.2 1 8.9-4.8 13.9-11.6 13.9z"/><path d="M6.4 17.6c2.9-3 6.3-5.7 10.4-8"/>',
+    zwiebel: '<path d="M12 20.2c-3.5 0-6-2.3-6-5.5 0-3.4 2.5-6.4 6-9 3.5 2.6 6 5.6 6 9 0 3.2-2.5 5.5-6 5.5z"/><path d="M12 5.7V3.2M10.1 5.5 8.6 3.8M13.9 5.5l1.5-1.7"/>',
+    champignon: '<path d="M4.6 12.8c0-4.1 3.3-7.4 7.4-7.4s7.4 3.3 7.4 7.4c0 .7-.5 1.2-1.2 1.2H5.8c-.7 0-1.2-.5-1.2-1.2z"/><path d="M9.9 14v4.3c0 1.1.9 1.9 2.1 1.9s2.1-.9 2.1-1.9V14"/>',
 
     /* ---- Getraenke, Sonstiges ---- */
-    kaffee: '<path d="M4 6.6h12v7c0 2.8-2.2 5-5 5H9c-2.8 0-5-2.2-5-5z"/><path d="M16 8.6h2.4a2.6 2.6 0 0 1 0 5.2H16" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20.4h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
-    getraenk: '<path d="M10 2.6h4v3l2.4 3.4v10a2 2 0 0 1-2 2H9.6a2 2 0 0 1-2-2V9z"/><path d="M8 12.4h8v4H8z" opacity=".4"/>',
-    snack: '<path d="M6.2 5.4h11.6L19 20a1.4 1.4 0 0 1-1.4 1.5H6.4A1.4 1.4 0 0 1 5 20z"/><path d="M6.2 5.4 5 2.6h14l-1.2 2.8z" opacity=".5"/>',
-    tiefkuehl: '<path d="M12 2.6v18.8M4 7.2l16 9.6M20 7.2 4 16.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 4.6 12 7l3-2.4M9 19.4 12 17l3 2.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-    korb: '<path d="M3 9.6h18l-1.8 9.2a1.6 1.6 0 0 1-1.6 1.3H6.4a1.6 1.6 0 0 1-1.6-1.3z"/><path d="M8.4 9.6 10.6 3.4M15.6 9.6 13.4 3.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',
+    kaffee: '<path d="M4.6 7.6h10.8v6.2c0 2.4-2 4.4-4.4 4.4H9c-2.4 0-4.4-2-4.4-4.4z"/><path d="M15.4 9.4h2.1a2.3 2.3 0 0 1 0 4.6h-2.1"/><path d="M3.6 20.4h12.8"/>',
+    getraenk: '<path d="M10.3 3.6h3.4v2.8l2.1 3.1v9a1.7 1.7 0 0 1-1.7 1.7H9.9a1.7 1.7 0 0 1-1.7-1.7v-9l2.1-3.1z"/><path d="M8.2 12.8h7.6v3.4H8.2z"/>',
+    snack: '<path d="M6.8 6.2h10.4l1 13a1.3 1.3 0 0 1-1.3 1.3H7.1a1.3 1.3 0 0 1-1.3-1.3z"/><path d="M6.8 6.2 5.9 3.6h12.2l-.9 2.6"/>',
+    tiefkuehl: '<path d="M12 3.2v17.6M4.7 7.6l14.6 8.8M19.3 7.6 4.7 16.4"/><path d="M9.6 5 12 7l2.4-2M9.6 19l2.4-2 2.4 2"/>',
+    korb: '<path d="M3.8 10.2h16.4l-1.6 8.4a1.5 1.5 0 0 1-1.5 1.2H6.9a1.5 1.5 0 0 1-1.5-1.2z"/><path d="M8.8 10.2 10.7 4.4M15.2 10.2 13.3 4.4"/>',
 
     /* ---- Gerichte ---- */
-    topf: '<path d="M3.6 8.6h16.8v6.6c0 3-2.4 5.4-5.4 5.4H9c-3 0-5.4-2.4-5.4-5.4z"/><path d="M2 6.8h20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 4.4c0-1 .8-1.4 1.6-1.4M14 4.4c0-1 .8-1.4 1.6-1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
-    pfanne: '<ellipse cx="9.6" cy="13.6" rx="7.6" ry="5.6"/><path d="M17 12.4h5.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
-    ofen: '<rect x="3" y="4.6" width="18" height="15" rx="2"/><path d="M3 9.4h18" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6.4" y="12" width="11.2" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/><circle cx="6.6" cy="7" r="1"/><circle cx="10" cy="7" r="1"/>',
-    schmarrn: '<ellipse cx="12" cy="16.6" rx="8.6" ry="3.4"/><ellipse cx="12" cy="12.6" rx="7.4" ry="3" opacity=".75"/><ellipse cx="12" cy="8.8" rx="6" ry="2.6" opacity=".5"/>',
-    teller: '<circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5.4" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".5"/>'
+    topf: '<path d="M4.4 9.4h15.2v5.6c0 2.7-2.2 4.9-4.9 4.9H9.3c-2.7 0-4.9-2.2-4.9-4.9z"/><path d="M2.8 7.6h18.4"/><path d="M9.5 5.4c0-.9.7-1.4 1.5-1.4M13.5 5.4c0-.9.7-1.4 1.5-1.4"/>',
+    pfanne: '<ellipse cx="9.8" cy="13.6" rx="6.8" ry="5"/><path d="M16.8 12.8h4.6"/>',
+    ofen: '<rect x="3.8" y="5.2" width="16.4" height="13.6" rx="1.8"/><path d="M3.8 9.6h16.4"/><rect x="7" y="12" width="10" height="4.4" rx=".8"/><circle cx="7.2" cy="7.4" r=".6"/><circle cx="10" cy="7.4" r=".6"/>',
+    schmarrn: '<path d="M5.4 16.6c0 1.6 3 2.8 6.6 2.8s6.6-1.2 6.6-2.8"/><path d="M6.2 12.9c0 1.4 2.6 2.6 5.8 2.6s5.8-1.2 5.8-2.6"/><path d="M7 9.4c0 1.3 2.2 2.3 5 2.3s5-1 5-2.3-2.2-2.3-5-2.3-5 1-5 2.3z"/>',
+    teller: '<circle cx="12" cy="12" r="8.4"/><circle cx="12" cy="12" r="4.8"/>'
   };
 
   var REGELN = [
@@ -116,7 +116,7 @@
     var span = document.createElement("span");
     span.className = "ico";
     span.setAttribute("aria-hidden", "true");
-    span.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" focusable="false">' + inner + "</svg>";
+    span.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false">' + inner + "</svg>";
     return span;
   }
 
