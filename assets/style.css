@@ -204,3 +204,11 @@ section[role="tabpanel"]{margin-top:1.75rem}
   .tabs{display:none}
   section[role="tabpanel"][hidden]{display:block!important}
 }
+
+/* Piktogramme */
+.ico{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+  width:1.2rem;height:1.2rem;margin-right:.45rem;vertical-align:-.2rem;color:var(--ink-soft)}
+.ico svg{width:100%;height:100%;display:block}
+li.done .ico{opacity:.45}
+.day h3 .ico{width:1.5rem;height:1.5rem;margin-right:.55rem;vertical-align:-.28rem;color:var(--deal)}
+@media print{.ico{color:#555}}

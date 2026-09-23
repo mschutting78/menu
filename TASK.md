@@ -25,21 +25,29 @@ Montag lohnt nur, wenn Märkte mit Wochenstart Montag dazukommen.
 - **Lidl** nur aufnehmen, wenn ein Artikel dort deutlich günstiger ist als bei den
   anderen, oder wenn er sonst nirgends im Angebot ist.
 
-**Quellen, nach Brauchbarkeit geordnet** (Stand 23.09.2026 geprüft):
+**Quellen, nach Brauchbarkeit geordnet** (am 23.09.2026 einzeln getestet):
 
 | Markt | Quelle | Form |
 |---|---|---|
-| Penny | `penny.at/angebote` | Text, direkt auswertbar, oft Tage im Voraus |
-| Billa | `shop.billa.at/aktionen` | Text mit Aktions- und Normalpreis, wechselt Donnerstag |
-| Spar | `spar.at/aktionen/kaernten` → Flugblatt öffnen | nur Bildseiten, im Browser durchblättern und ablesen |
-| Lidl | `lidl.at/c/flugblatt/…` | nur Bildseiten; `rabattkompass.at` liefert Text ohne Normalpreise |
+| Penny | `penny.at/angebote` | Text, direkter Web-Abruf, oft Tage im Voraus |
+| Billa + Billa Plus | Flugblatt-PDF, Link „als PDF downloaden" auf `billa.at/unsere-aktionen/flugblatt` | **PDF mit Textebene**, direkter Web-Abruf, vollständig |
+| Billa, Zweitquelle | `shop.billa.at/aktionen` | Text, wechselt aber erst Donnerstag früh |
+| Spar + Eurospar | `spar.at/produktwelt/<kategorie>?inAngebot=true` | Text mit „statt"-Preis, lädt per JavaScript → **nur im Browser lesbar**, nicht per Web-Abruf |
+| Interspar | `interspar.at/shop/lebensmittel/search/?query=*&hitsPerPage=80&page=1&filter=is-on-promotion:true` | Text, ebenfalls nur im Browser; rund 900 Treffer, aber ohne Normalpreis in der Liste |
+| Lidl | `lidl.at/l/de/flugblatt/…` | Produktnamen lesbar, **Preise nur im Bild** — hier bleibt nur Ablesen |
 
-Eine offene Schnittstelle für österreichische Flugblätter gibt es nicht. Die Aggregatoren
+Die Spar-Produktwelt kennt eine Marktauswahl; damit lassen sich regionale Aktionen für
+Kärnten einblenden. Die Kategorie-Slugs stehen in der Navigation der Produktwelt.
+
+Getestet und verworfen: eine öffentliche Schnittstelle bei marktguru gibt es nicht (404),
+der issuu-Reader hinter dem Penny-Flugblatt antwortet mit 403, und die Aggregatoren
 (marktguru, aktionsfinder, kimbino, prospektmaschine, flugblattangebote, rabattkompass,
-aktionsradar) zeigen die Flugblätter ebenfalls als Bilder; ihre Textseiten enthalten nur
-einen Bruchteil der Artikel und selten Normalpreise. Für Spar und Lidl bleibt daher das
-Ablesen aus dem Blätterkatalog. Dabei die großen Preisangaben nehmen und das
-Kleingedruckte nur, wenn es eindeutig lesbar ist.
+aktionsradar) zeigen dieselben Bildseiten; ihre Textlisten enthalten einen Bruchteil der
+Artikel und selten Normalpreise. Eine offene Datenquelle für österreichische Flugblätter
+existiert nicht.
+
+Die Billa-PDFs erscheinen in der Ausgabe Wien; regionale Abweichungen für Kärnten sind
+möglich und gehören in die Anmerkung.
 
 **Preise niemals schätzen oder aus der Vorwoche übernehmen.** Was nicht belegbar ist,
 kommt nicht in die Datei. Stattdessen den Markt in `status[]` auf `partial` oder `missing`

@@ -7,7 +7,7 @@
     "aktionsradar.at",
     "flugblattangebote.at"
   ],
-  "notes": "Erhebung am Montag 21.09., Nachlauf am Mittwoch 23.09. abends. Die SPAR-Preise stammen aus dem Blätterkatalog des Flugblatts KW 39 und wurden von den Seiten abgelesen — im Markt gegenprüfen. Billa hatte am Mittwoch abends auch im eigenen Blätterkatalog noch die Vorwoche stehen; die Woche ab 24.09. fehlt daher vollständig.",
+  "notes": "Erhebung am Montag 21.09., Nachlauf am Mittwoch 23.09. abends. Die SPAR-Preise wurden aus dem Blätterkatalog abgelesen, die Billa-Preise stammen aus den Flugblatt-PDFs in der Ausgabe Wien — regionale Abweichungen in Kärnten sind möglich. Alles im Markt gegenprüfen.",
   "status": [
     {
       "market": "Penny",
@@ -21,8 +21,8 @@
     },
     {
       "market": "Billa / Billa Plus",
-      "state": "missing",
-      "note": "am Mi 23.09. abends steht im Blätterkatalog auf billa.at noch die Vorwoche (17.–23.09.), BILLA wie BILLA PLUS — das neue Flugblatt erscheint erst am Donnerstag"
+      "state": "ok",
+      "note": "Flugblatt und BILLA PLUS Flugblatt KW 39 aus den PDFs ausgelesen (Ausgabe Wien)"
     },
     {
       "market": "Lidl",
@@ -588,6 +588,198 @@
       "validFrom": "2026-09-24",
       "validUntil": "2026-10-07",
       "category": "Getränke"
+    },
+    {
+      "product": "Hofstädter Schweinefleisch Gulasch",
+      "unit": "400 g, ab 2 Pkg",
+      "market": "Billa",
+      "price": 4.99,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst",
+      "regular": 6.48
+    },
+    {
+      "product": "Hofstädter Hendl-Schnitzel",
+      "unit": "440 g",
+      "market": "Billa",
+      "price": 5.79,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst",
+      "regular": 7.82
+    },
+    {
+      "product": "Berger Wachauer Frankfurter",
+      "unit": "240 g, bei 3 Pkg",
+      "market": "Billa",
+      "price": 1.66,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst",
+      "regular": 2.49
+    },
+    {
+      "product": "Woerle Mondseer Heumilch",
+      "unit": "420 g, ab 2 Stk",
+      "market": "Billa",
+      "price": 4.49,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse",
+      "regular": 7.39
+    },
+    {
+      "product": "Nöm Bio-Teebutter",
+      "unit": "250 g, ab 4 Pkg",
+      "market": "Billa",
+      "price": 1.49,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse",
+      "regular": 2.66
+    },
+    {
+      "product": "Zespri Riesenkiwi gold",
+      "unit": "je Stück",
+      "market": "Billa",
+      "price": 1.79,
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse",
+      "regular": 2.75
+    },
+    {
+      "product": "Tricolore Paprika",
+      "unit": "3er-Pack",
+      "market": "Billa",
+      "price": 0.99,
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Ja! Natürlich Bio-Bananen",
+      "unit": "je kg",
+      "market": "Billa",
+      "price": 2.49,
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Stiegl Goldbräu",
+      "unit": "0,5 l",
+      "market": "Billa",
+      "price": 1.38,
+      "validUntil": "2026-09-30",
+      "category": "Getränke"
+    },
+    {
+      "product": "Coca-Cola",
+      "unit": "1 l",
+      "market": "Billa",
+      "price": 0.99,
+      "validUntil": "2026-09-30",
+      "category": "Getränke"
+    },
+    {
+      "product": "Jacobs Monarch",
+      "unit": "500 g, nur Fr+Sa",
+      "market": "Billa",
+      "price": 8.99,
+      "validUntil": "2026-09-26",
+      "category": "Kaffee",
+      "regular": 11.99,
+      "validFrom": "2026-09-25",
+      "untilSaturday": true
+    },
+    {
+      "product": "Nescafé Gold",
+      "unit": "200 g, nur Fr+Sa",
+      "market": "Billa",
+      "price": 7.49,
+      "validUntil": "2026-09-26",
+      "category": "Kaffee",
+      "regular": 9.99,
+      "validFrom": "2026-09-25",
+      "untilSaturday": true
+    },
+    {
+      "product": "clever Rindsschnitzel (nur PLUS)",
+      "unit": "600 g, ab 2 Pkg",
+      "market": "Billa",
+      "price": 8.99,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst",
+      "regular": 11.98
+    },
+    {
+      "product": "Schweineschnitzel (nur PLUS)",
+      "unit": "700 g, ab 2 Pkg",
+      "market": "Billa",
+      "price": 5.99,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst",
+      "regular": 9.59
+    },
+    {
+      "product": "Hofstädter Putenbrust (nur PLUS)",
+      "unit": "je kg",
+      "market": "Billa",
+      "price": 16.8,
+      "validUntil": "2026-09-30",
+      "category": "Fleisch & Wurst"
+    },
+    {
+      "product": "Bergbauern H-Milch (nur PLUS)",
+      "unit": "1 l",
+      "market": "Billa",
+      "price": 0.66,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "BILLA Heumilch (nur PLUS)",
+      "unit": "1 l",
+      "market": "Billa",
+      "price": 0.99,
+      "validUntil": "2026-09-30",
+      "category": "Milch & Käse"
+    },
+    {
+      "product": "Äpfel Pink Lady (nur PLUS)",
+      "unit": "900 g Tasse",
+      "market": "Billa",
+      "price": 3.33,
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "SanLucar Trauben rot, kernlos (nur PLUS)",
+      "unit": "je kg",
+      "market": "Billa",
+      "price": 3.99,
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "Eissalat (nur PLUS)",
+      "unit": "je Stück",
+      "market": "Billa",
+      "price": 0.99,
+      "validUntil": "2026-09-30",
+      "category": "Obst & Gemüse"
+    },
+    {
+      "product": "De Cecco Teigwaren (nur PLUS)",
+      "unit": "500 g, ab 2 Pkg",
+      "market": "Billa",
+      "price": 2.14,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen",
+      "regular": 4.29
+    },
+    {
+      "product": "Ben's Original Reis (nur PLUS)",
+      "unit": "1 kg, ab 2 Pkg",
+      "market": "Billa",
+      "price": 1.99,
+      "validUntil": "2026-09-30",
+      "category": "Konserven & Suppen",
+      "regular": 2.69
     }
   ],
   "flatPrices": "Aktionspreise ohne ausgewiesenen Normalpreis, für die Menüplanung relevant (Penny, 24.–30.09.): Faschiertes gemischt 1 kg 5,49 · Hendl bratfertig 4,99/kg · Hendl-Filet natur 700 g 7,79 · Minuten-Schnitzel 1 kg 7,99 · Schweins-Schnitzelfleisch 8,49/kg · XXL Schulter 5,49/kg · Putenschnitzel 550 g 5,69 · Karotten 1 kg 0,99 · Gurke 1,29 · Äpfel 2 kg 2,49 · Schärdinger Gouda 1 kg 6,66 · Sauerrahm 250 g 0,79 · Eier 10 Stück 3,29. Lidl (24.–30.09., ohne Normalpreise): Hühnerkeulen 3,99 · Faschiertes gemischt 5,99 (Penny mit 5,49/kg günstiger) · Lachsfilet 5,99 · Bio-Trauben kernlos 2,09 · Mini-Paprika 1,49 · Ciabatta 0,69.",

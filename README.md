@@ -107,6 +107,26 @@ die Abschnitte tragen dafür die IDs `angebote`, `menue` und `liste`.
 Die Summenzeile der Einkaufsliste klebt am unteren Rand, damit beim Scrollen durch die
 Liste immer sichtbar bleibt, was noch offen ist. "Liste gesamt" wird dort ausgeblendet.
 
+## Piktogramme
+
+`assets/icons.js` bringt rund 30 Inline-SVG-Symbole mit. Keine externen Anfragen, keine
+Bilddateien, keine Lizenzfragen — und sie funktionieren offline im Markt, wo das Netz
+gern schwach ist. Die Farbe kommt aus `currentColor`, also passen sie sich dem Theme an.
+
+Zugeordnet wird über Stichwörter aus Artikelname und Menge, beim Menü aus Gerichtstitel
+und Zutaten. Trifft keine Regel, erscheint ein Einkaufskorb beziehungsweise ein Teller.
+
+Die Automatik lässt sich pro Eintrag überstimmen — ein Feld `icon` im JSON gewinnt:
+
+```json
+{ "name": "Ömür Hirtenkäse", "qty": "1 Pkg", "eur": 4.99, "icon": "kaese" }
+```
+
+Dasselbe Feld gibt es bei `menu.days[]`. Die gültigen Namen liefert `Piktogramm.namen`
+in der Browserkonsole. Neue Symbole kommen in das Objekt `ICONS` in `assets/icons.js`,
+neue Stichwörter in `REGELN` (Artikel) oder `GERICHT_REGELN` (Gerichte); die Reihenfolge
+entscheidet, die erste passende Regel gewinnt.
+
 ## Abhaken
 
 Der Zustand der Einkaufsliste liegt in `localStorage` unter `einkauf:<id>`,

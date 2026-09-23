@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script src="assets/icons.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -18,6 +19,7 @@
 
 <script>
 (function(){
+  var global_pikto = (typeof Piktogramm !== "undefined") ? Piktogramm : null;
   var app = document.getElementById("app");
   var foot = document.getElementById("foot");
 
@@ -273,7 +275,13 @@
       row.appendChild(left);
 
       var right = el("div");
-      right.appendChild(el("h3", null, day.title));
+      var h3 = el("h3");
+      if (global_pikto) {
+        var dp = global_pikto.fuerGericht(day.title + " " + (day.ingredients || []).join(" "), day.icon);
+        if (dp) h3.appendChild(dp);
+      }
+      h3.appendChild(document.createTextNode(day.title));
+      right.appendChild(h3);
       if(day.ingredients) right.appendChild(el("p", "ing", day.ingredients.join(" · ")));
       if(day.deals && day.deals.length) right.appendChild(el("p", "uses", "Aktion: " + day.deals.join(", ")));
 
@@ -314,6 +322,10 @@
         cb.type = "checkbox";
         cb.dataset.key = gi + ":" + ii;
         var txt = el("span");
+        if (global_pikto) {
+          var ip = global_pikto.fuerArtikel(item.name + " " + (item.qty || ""), item.icon);
+          if (ip) txt.appendChild(ip);
+        }
         txt.appendChild(document.createTextNode(item.name));
         if(item.qty) txt.appendChild(el("span", "qty", item.qty));
         var price = el("span", "price", item.eur != null ? eur(item.eur) : "");
