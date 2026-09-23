@@ -82,14 +82,30 @@
     }
     app.appendChild(head);
 
+    /* ---- Sprungleiste, klebt am Handy oben ---- */
+    var jump = el("nav", "jump");
+    function jumpLink(id, label){
+      var a = el("a", null, label);
+      a.href = "#" + id;
+      jump.appendChild(a);
+    }
+
+    var hasDeals = !!(d.deals && d.deals.length);
+    var hasMenu = !!(d.menu && d.menu.days && d.menu.days.length);
+    var hasShop = !!(d.shopping && d.shopping.length);
+    if(hasDeals) jumpLink("angebote", "Angebote");
+    if(hasMenu) jumpLink("menue", "Men\u00fc");
+    if(hasShop) jumpLink("liste", "Liste");
+    if(jump.childNodes.length > 1) app.appendChild(jump);
+
     /* ---- Angebote ---- */
-    if(d.deals && d.deals.length) app.appendChild(deals(d));
+    if(hasDeals){ var sD = deals(d); sD.id = "angebote"; app.appendChild(sD); }
 
     /* ---- Menü ---- */
-    if(d.menu && d.menu.days && d.menu.days.length) app.appendChild(menu(d.menu));
+    if(hasMenu){ var sM = menu(d.menu); sM.id = "menue"; app.appendChild(sM); }
 
     /* ---- Einkaufsliste ---- */
-    if(d.shopping && d.shopping.length) app.appendChild(shopping(d));
+    if(hasShop){ var sS = shopping(d); sS.id = "liste"; app.appendChild(sS); }
 
     /* ---- Vorrat ---- */
     if(d.pantry && d.pantry.length){

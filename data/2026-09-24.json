@@ -7,7 +7,7 @@
     "aktionsradar.at",
     "flugblattangebote.at"
   ],
-  "notes": "Erhebung am Montag statt Mittwoch — die Donnerstags-Flugblätter von Billa und Spar waren noch nicht veröffentlicht.",
+  "notes": "Erhebung am Montag 21.09., Nachlauf am Mittwoch 23.09. abends. Das Billa-Flugblatt ab 24.09. war auch am Mittwoch noch nicht inhaltlich veröffentlicht; die Kärntner SPAR-Flugblätter liegen nur als Bild-PDF vor. Vollständig wird die Woche erst mit einem Lauf am Donnerstag früh.",
   "status": [
     {
       "market": "Penny",
@@ -17,12 +17,12 @@
     {
       "market": "Spar / Eurospar",
       "state": "partial",
-      "note": "nur Monatssparer, gültig bis 30.09."
+      "note": "Monatssparer bis 30.09. plus Flugblatt KW 39 (24.09.–07.10.), davon nur die Getränke-Highlights lesbar"
     },
     {
       "market": "Billa / Billa Plus",
       "state": "missing",
-      "note": "neues Flugblatt noch nicht veröffentlicht"
+      "note": "Flugblatt 24.–30.09. angekündigt, Inhalt am Mi 23.09. abends noch nicht veröffentlicht"
     },
     {
       "market": "Lidl",
@@ -274,6 +274,33 @@
       "validFrom": "2026-09-24",
       "validUntil": "2026-09-30",
       "category": "Brot & Gebäck"
+    },
+    {
+      "product": "Wieselburger Bier alkoholfrei",
+      "unit": "0,5 l, −50 % lt. Flugblatt",
+      "market": "Spar",
+      "price": 4.02,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Getränke"
+    },
+    {
+      "product": "Heineken Lager / alkoholfrei / Desperados",
+      "unit": "0,33 l, −31 % lt. Flugblatt",
+      "market": "Spar",
+      "price": 1.49,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Getränke"
+    },
+    {
+      "product": "Ottakringer Helles / Lager / Frucade Radler",
+      "unit": "0,5 l, 12+12 gratis",
+      "market": "Spar",
+      "price": 0.72,
+      "validFrom": "2026-09-24",
+      "validUntil": "2026-10-07",
+      "category": "Getränke"
     }
   ],
   "flatPrices": "Aktionspreise ohne ausgewiesenen Normalpreis, für die Menüplanung relevant (Penny, 24.–30.09.): Faschiertes gemischt 1 kg 5,49 · Hendl bratfertig 4,99/kg · Hendl-Filet natur 700 g 7,79 · Minuten-Schnitzel 1 kg 7,99 · Schweins-Schnitzelfleisch 8,49/kg · XXL Schulter 5,49/kg · Putenschnitzel 550 g 5,69 · Karotten 1 kg 0,99 · Gurke 1,29 · Äpfel 2 kg 2,49 · Schärdinger Gouda 1 kg 6,66 · Sauerrahm 250 g 0,79 · Eier 10 Stück 3,29. Lidl (24.–30.09., ohne Normalpreise): Hühnerkeulen 3,99 · Faschiertes gemischt 5,99 (Penny mit 5,49/kg günstiger) · Lachsfilet 5,99 · Bio-Trauben kernlos 2,09 · Mini-Paprika 1,49 · Ciabatta 0,69.",

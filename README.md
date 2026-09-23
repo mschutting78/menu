@@ -96,9 +96,16 @@ Ein Angebot:
 ## Am Handy
 
 Unter 46 rem Breite stellt sich die Angebotstabelle auf Karten um — eine Karte je
-Angebot, Spaltennamen kommen aus `data-label` in `woche.html`. Die Summenzeile der
-Einkaufsliste klebt dann am unteren Rand, damit beim Scrollen durch die Liste immer
-sichtbar bleibt, was noch offen ist. "Liste gesamt" wird dort ausgeblendet.
+Angebot, zwei Zeilen hoch: Produkt oben, darunter Markt, Aktionspreis, Normalpreis,
+Ersparnis und Gültigkeit nebeneinander. Kompakt zu halten ist wichtig, sonst schiebt
+eine lange Angebotsliste das Wochenmenü ausser Sichtweite.
+
+Unter dem Kopf steht deshalb zusätzlich eine klebende Sprungleiste mit *Angebote*,
+*Menü* und *Liste*. Sie wird in `woche.html` aus den vorhandenen Abschnitten gebaut;
+die Abschnitte tragen dafür die IDs `angebote`, `menue` und `liste`.
+
+Die Summenzeile der Einkaufsliste klebt am unteren Rand, damit beim Scrollen durch die
+Liste immer sichtbar bleibt, was noch offen ist. "Liste gesamt" wird dort ausgeblendet.
 
 ## Abhaken
 
